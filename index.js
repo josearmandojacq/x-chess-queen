@@ -26,6 +26,7 @@ function renderChessBoard(table){
       tr.appendChild(td);
       matrix[i].push(td);
 
+      console.log(i - t % 2);
       if((i - t) % 2 !== 0){
         td.classList.add("black");
       }
@@ -59,8 +60,7 @@ function highlight2(matrix, rowNum, columNum) {
 
   function _shouldHighlight(crtRowNum, crtColumNum, rowNum, columNum) {
 
-    console.log("currentRowNum: " + crtRowNum, "currentColumnNum: " + crtColumNum);
-    console.log("rowNum: " + rowNum, "columnNum: " + columNum);
+
     return (
       crtRowNum - rowNum === crtColumNum - columNum ||
       (crtRowNum - rowNum) * -1 === crtColumNum - columNum ||
