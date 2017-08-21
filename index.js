@@ -26,7 +26,7 @@ function renderChessBoard(table){
       tr.appendChild(td);
       matrix[i].push(td);
 
-      console.log(i - t % 2);
+      
       if((i - t) % 2 !== 0){
         td.classList.add("black");
       }
