@@ -35,7 +35,7 @@ function renderChessBoard(table){
   }
 
 
-  
+
 
   return matrix;
 }
@@ -58,6 +58,9 @@ function highlight2(matrix, rowNum, columNum) {
   });
 
   function _shouldHighlight(crtRowNum, crtColumNum, rowNum, columNum) {
+
+    console.log("currentRowNum: " + crtRowNum, "currentColumnNum: " + crtColumNum);
+    console.log("rowNum: " + rowNum, "columnNum: " + columNum);
     return (
       crtRowNum - rowNum === crtColumNum - columNum ||
       (crtRowNum - rowNum) * -1 === crtColumNum - columNum ||
