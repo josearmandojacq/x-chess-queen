@@ -1,28 +1,33 @@
 ///////// adding the event listener /////////////
 
-function addCellListener(matrix){
+/*function addCellListener(matrix){
   matrix.forEach(function(rowArray, i){
     rowArray.forEach(function(td, j){
       td.addEventListener("click", function(item){
-
+        console.log(i, j);
         highlight2(matrix, i,j);
       });
     });
   });
-}
+}*/
 
 
 ////////// rendering the board /////////////////////
 
 function renderChessBoard(table){
 
-  
+  ////// adding the elements to the table /////////////
   var matrix = [];
   for(var i = 0; i < 8; i++){
     var tr = document.createElement("tr");
     matrix[i] = [];
     for(var t = 0; t < 8; t++){
       var td = document.createElement("td");
+      td.addEventListener("click");
+        
+        highlight2(matrix, i,j);
+
+
       tr.appendChild(td);
       matrix[i].push(td);
 
@@ -34,6 +39,10 @@ function renderChessBoard(table){
 
     table.appendChild(tr);
   }
+
+
+
+
   return matrix;
 }
 
