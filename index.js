@@ -5,10 +5,7 @@ function addCellListener(matrix){
     rowArray.forEach(function(td, j){
       td.addEventListener("click", function(item){
         console.log(i, j);
-        removeHighlight(matrix);
-        highlightRow(item);
-        highlightColumn(matrix, j);
-        highlightDiagonals(matrix, i,j);
+        highlight2(matrix, i,j);
       });
     });
   });
@@ -29,26 +26,25 @@ function renderChessBoard(table){
       tr.appendChild(td);
       matrix[i].push(td);
 
+      if((i - t) % 2 !== 0){
+        td.classList.add("black");
+      }
     }
 
     table.appendChild(tr);
   }
 
 
-  //// putting the color to the board////// need some changes //////////
-  for (var i = 0; i < 8; i++) {
-    for (var j = 0; j < 8; j++) {
-      if(i % 2 == 0 && j % 2 == 1){
-      document.getElementsByTagName('tr')[i].cells[j].classList.add("black");
-      }else if(i % 2 != 0 && j % 2 == 0){
-      document.getElementsByTagName('tr')[i].cells[j].classList.add("black");
-      }
-    }
-
-  }
+  // //// putting the color to the board////// need some changes //////////
+  // for (var i = 0; i < 8; i++) {
+  //   for (var j = 0; j < 8; j++) {
+  //     if((i - j) % 2 !== 0){
+  //       document.getElementsByTagName('tr')[i].cells[j].classList.add("black");
+  //     }
+  //   }
+  // }
 
   return matrix;
-
 }
 
 
@@ -150,12 +146,33 @@ function removeHighlight(matrix){
 
 
 
-
-
    console.log(temp);
  }
 
+function highlight2(matrix, rowNum, columNum) {
+  matrix.forEach(function(row, rowIdx) {
+    row.forEach(function(cell, colIdx) {
+      if (_shouldHighlight(rowNum, columNum, rowIdx, colIdx)) {
+        cell.classList.add("highlight");
+      } else {
+        cell.classList.remove("highlight");
+      }
+    });
+  });
 
+  function _shouldHighlight(crtRowNum, crtColumNum, rowNum, columNum) {
+    return (
+      crtRowNum - rowNum === crtColumNum - columNum ||
+      (crtRowNum - rowNum) * -1 === crtColumNum - columNum ||
+      crtRowNum === rowNum ||
+      crtColumNum === columNum
+    );
+  }
+}
+
+function highlight3(matrix, rowNum, columNum) {
+
+}
 
 
 ////////////// Calling the functions /////////////
