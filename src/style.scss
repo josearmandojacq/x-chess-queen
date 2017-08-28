@@ -1,0 +1,49 @@
+
+.chessboard{
+  width: 100vmin;
+  height: 100vmin;
+  margin: 0 auto;
+
+  &--titled{
+    /**/
+  }
+  &__table{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+  &__row{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 12.5%;
+  }
+  &__cell{
+    width: 12.5%;
+    border: 1px solid black;
+    &:hover{
+
+    }
+    &--black{
+      background-color: black;
+      &:hover{
+        /**/
+      }
+    }
+    &--highlight{
+      box-shadow: inset 0 0 4em #0000cc;
+      &:after{
+          /**/
+      }
+    }
+
+  }
+}
+.changeColor{
+  width: 12.5%;
+  &:hover{
+    background-color: rgb(50,205,50);
+  }
+
+}
