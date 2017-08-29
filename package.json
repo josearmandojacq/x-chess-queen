@@ -28,6 +28,8 @@
     "uglify-js": "^3.0.28",
     "wdio": "^1.0.0",
     "wdio-mocha-framework": "^0.5.11",
+    "wdio-selenium-standalone-service": "0.0.9",
+    "wdio-static-server-service": "^1.0.1",
     "xt-sc-chess-queen": "github:zeropaper/xt-sc-chess-queen"
   },
   "dependencies": {

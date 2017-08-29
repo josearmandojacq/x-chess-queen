@@ -36,6 +36,10 @@ describe('Chessboard', function () {
     //
     // look at `browser.elements()` and `browser.elementÌdClick()`
     //
+    var element = browser.elements('.chessboard__cell');
+    console.log('asasas', element.value[29]);
+    browser.elementIdClick(element.value[29].ELEMENT);
+    browser.pause(5000);
 
     var highlightedElements = browser.elements('.chessboard__cell--highlight').value;
     assert(highlightedElements.length, 28);
