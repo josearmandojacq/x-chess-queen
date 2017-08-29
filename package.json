@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jshint index.js",
+    "test": "npm run build && wdio test/wdio.conf.js",
     "prebuild": "jshint && mkdirp docs/image-diff && cp src/index.html docs/",
     "build": "browserify src/index.js -o docs/bundle.js && node-sass src/style.scss docs/style.css ",
     "postbuild": "uglifyjs docs/bundle.js"
@@ -25,6 +25,12 @@
     "jshint": "^2.9.5",
     "mkdirp": "^0.5.1",
     "node-sass": "^4.5.3",
-    "uglify-js": "^3.0.28"
+    "uglify-js": "^3.0.28",
+    "wdio": "^1.0.0",
+    "wdio-mocha-framework": "^0.5.11",
+    "xt-sc-chess-queen": "github:zeropaper/xt-sc-chess-queen"
+  },
+  "dependencies": {
+    "array-matrix": "github:josearmandojacq/x-array-matrix"
   }
 }

@@ -160,3 +160,6 @@ function highlightDiagonals(rowNum, columnNum) {
 ////////////// Calling the functions /////////////
 var chessBoardTable = document.querySelector('.chessboard__table');
 var chessMatrix = renderChessBoard();
+
+var arrayMatrixLib = require('array-matrix');
+var createMatrix = arrayMatrixLib.createMatrix;
