@@ -1,18 +1,3 @@
-///////// adding the event listener /////////////
-
-/*function addCellListener(matrix){
-  matrix.forEach(function(rowArray, i){
-    rowArray.forEach(function(td, j){
-      td.addEventListener('click', function(item){
-        console.log(i, j);
-        highlight2(matrix, i,j);
-      });
-    });
-  });
-}*/
-
-
-
 function attachListener(divCell, rowNum, columNum) {
   divCell.addEventListener('click', function () {
     removeHighlight();
@@ -51,31 +36,6 @@ function renderChessBoard() {
   return matrix;
 }
 
-///////////////// Highlighting ///////////
-
-/*function highlight2(matrix, rowNum, columNum) {
-  matrix.forEach(function (row, rowIdx) {
-    row.forEach(function (cell, colIdx) {
-      if (_shouldHighlight(rowNum, columNum, rowIdx, colIdx)) {
-        cell.classList.add('chessboard__cell--highlight');
-      } else {
-        cell.classList.remove('chessboard__cell--highlight');
-      }
-    });
-  });
-
-  function _shouldHighlight(crtRowNum, crtColumNum, rowNum, columNum) {
-    console.log('currentRowNum:' + crtRowNum, 'crtColumNum:' + crtColumNum, 'rowNum' + rowNum, 'columNum:' + columNum);
-    return (
-      crtRowNum - rowNum === crtColumNum - columNum ||
-      (crtRowNum - rowNum) * -1 === crtColumNum - columNum ||
-      crtRowNum === rowNum ||
-      crtColumNum === columNum
-    );
-  }
-}*/
-
-
 function highlightRow(rowNum) {
   chessMatrix[rowNum][0].classList.add('chessboard__cell--highlight');
 
@@ -102,11 +62,8 @@ function removeHighlight() {
 
 function highlightCell(rowNum, columnNum) {
 
-
   chessMatrix[rowNum][0].childNodes[columnNum].classList.add('chessboard__cell--highlight');
 
-
-  //divCell.classList.add('chessboard__cell--highlight');
 }
 
 function highlightDiagonals(rowNum, columnNum) {
