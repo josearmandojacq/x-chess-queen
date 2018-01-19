@@ -30,14 +30,7 @@ describe('Chessboard', function () {
   });
 
   it('highlights the possible moves when a .chessboard__cell is clicked', function () {
-    //
-    // Look at the documentation of WebdriverIO (in the API section of the site)
-    // and write some code to make a click on the cell at the 4th row, 5th column of the chessboard
-    //
-    // look at `browser.elements()` and `browser.elementÌdClick()`
-    //
     var element = browser.elements('.chessboard__cell');
-    console.log('asasas', element.value[29]);
     browser.elementIdClick(element.value[29].ELEMENT);
     browser.pause(5000);
 
@@ -48,7 +41,7 @@ describe('Chessboard', function () {
   describe('normal design', function () {
     Object.keys(checkStyle.resolutions).forEach(key => {
       it('has the right styles for ' + key.split('-').join(' '), function () {
-        checkStyle(browser, key, 'highlight', './docs/image-diffs', 5);
+        checkStyle(browser, key, 'highlight', __dirname + '/../docs/image-diffs', 5);
       });
     });
   });

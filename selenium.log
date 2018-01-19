@@ -1,15 +1,15 @@
-15:46:54.175 INFO - Selenium build info: version: '3.5.2', revision: '10229a9020'
-15:46:54.175 INFO - Launching a standalone Selenium Server
-2017-08-29 15:46:54.204:INFO::main: Logging initialized @345ms to org.seleniumhq.jetty9.util.log.StdErrLog
-15:46:54.313 INFO - Driver class not found: com.opera.core.systems.OperaDriver
-15:46:54.391 INFO - Driver provider class org.openqa.selenium.ie.InternetExplorerDriver registration is skipped:
+10:06:11.068 INFO - Selenium build info: version: '3.5.2', revision: '10229a9020'
+10:06:11.069 INFO - Launching a standalone Selenium Server
+2017-08-30 10:06:11.117:INFO::main: Logging initialized @479ms to org.seleniumhq.jetty9.util.log.StdErrLog
+10:06:11.365 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+10:06:11.486 INFO - Driver provider class org.openqa.selenium.ie.InternetExplorerDriver registration is skipped:
  registration capabilities Capabilities [{ensureCleanSession=true, browserName=internet explorer, version=, platform=WINDOWS}] does not match the current platform MAC
-15:46:54.392 INFO - Driver provider class org.openqa.selenium.edge.EdgeDriver registration is skipped:
+10:06:11.487 INFO - Driver provider class org.openqa.selenium.edge.EdgeDriver registration is skipped:
  registration capabilities Capabilities [{browserName=MicrosoftEdge, version=, platform=WINDOWS}] does not match the current platform MAC
-15:46:54.492 INFO - Using the passthrough mode handler
-2017-08-29 15:46:54.582:INFO:osjs.Server:main: jetty-9.4.5.v20170502
-2017-08-29 15:46:54.633:WARN:osjs.SecurityHandler:main: ServletContext@o.s.j.s.ServletContextHandler@5ae63ade{/,null,STARTING} has uncovered http methods for path: /
-2017-08-29 15:46:54.642:INFO:osjsh.ContextHandler:main: Started o.s.j.s.ServletContextHandler@5ae63ade{/,null,AVAILABLE}
+10:06:11.545 INFO - Using the passthrough mode handler
+2017-08-30 10:06:11.617:INFO:osjs.Server:main: jetty-9.4.5.v20170502
+2017-08-30 10:06:11.683:WARN:osjs.SecurityHandler:main: ServletContext@o.s.j.s.ServletContextHandler@5ae63ade{/,null,STARTING} has uncovered http methods for path: /
+2017-08-30 10:06:11.694:INFO:osjsh.ContextHandler:main: Started o.s.j.s.ServletContextHandler@5ae63ade{/,null,AVAILABLE}
 Usage: <main class> [options]
   Options:
     --version, -version

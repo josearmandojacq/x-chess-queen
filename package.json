@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run build && wdio test/wdio.conf.js",
-    "prebuild": "jshint && mkdirp docs/image-diff && cp src/index.html docs/",
+    "prebuild": "jshint && mkdirp docs/image-diffs && cp src/index.html docs/",
     "build": "browserify src/index.js -o docs/bundle.js && node-sass src/style.scss docs/style.css ",
     "postbuild": "uglifyjs docs/bundle.js"
   },

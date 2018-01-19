@@ -1,6 +1,6 @@
 .chessboard {
-  width: 100vmin;
-  height: 100vmin;
+  width: 75vmin;
+  height: 75vmin;
   margin: 0 auto; }
   .chessboard--titled {
     /**/ }
